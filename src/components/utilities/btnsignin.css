@@ -1,0 +1,32 @@
+.btn-signin {
+  background: none;
+  border: none;
+  color: #fff;
+  height: 2.25rem;
+  width: 8.75rem;
+  background-color: var(--clr-primary);
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  gap: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-wrap: nowrap;
+
+  span {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-semibold);
+  }
+
+  &:hover {
+      background-color: var(--clr-gray-100);
+      color: var(--clr-primary);
+      text-decoration: none;
+      border: 1px solid var(--clr-primary);
+  }
+  @media (min-width: 1400px){
+    display: flex;
+  }
+}
