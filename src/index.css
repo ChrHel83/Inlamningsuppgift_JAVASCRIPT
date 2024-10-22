@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+html {
+    color-scheme: light;
+}
+:root {
+    --clr-primary: #6366f1;
+    --clr-bg: #ffffff;
+    --clr-gray-100: #f3f6ff;
+    --clr-gray-200: #eff2fc;
+    --clr-gray-300: #e2e5f1;
+    --clr-gray-400: #d4d7e5;
+    --clr-gray-500: #b4b7c9;
+    --clr-gray-600: #9397ad;
+    --clr-gray-700: #565973;
+    --clr-gray-800: #33354d;
+    --clr-gray-900: #0b0f19;
+
+    --clr-bg-dropdown: var(--clr-gray-500);
+
+    --bg-temp-light: rgb(212, 175, 175);
+
+    --clr-black: black;
+    --clr-white: white;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+}
+
+/* Färger om darkmode är aktiverat */
+.darkmode {
+    color-scheme: dark;
+    --clr-bg: black;
+
+    --clr-gray-900: var(--clr-gray-100);
+    --clr-gray-700: #ffffff;
+
+    --clr-black: white;
+    --clr-white: black;
+
+    --bg-temp-light: rgb(65, 37, 37);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--clr-bg);
+    color: var(--clr-black);
+}
