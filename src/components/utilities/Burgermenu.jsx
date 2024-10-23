@@ -1,7 +1,7 @@
 import "./burgermenu.css";
 const Burgermenu = () => {
   return ( 
-    <i class="burgermenu fa-solid fa-bars" />
+    <i className="burgermenu fa-solid fa-bars" />
    );
 }
  

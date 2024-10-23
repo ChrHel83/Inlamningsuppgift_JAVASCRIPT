@@ -7,7 +7,6 @@ import Burgermenu from "../utilities/Burgermenu";
 import "./navbar.css";
 
 const Navbar = () => {
-  const [darkmode, setDarkmode] = useState(document.body.parentElement.classList.contains("darkmode"));
 
     return (
         <div id="navbar">

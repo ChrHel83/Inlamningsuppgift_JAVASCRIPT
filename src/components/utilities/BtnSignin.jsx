@@ -2,11 +2,12 @@ import "./btnsignin.css"
 const BtnSignin = () => {
   return ( 
     <>
-    <a href="#" class="btn-signin" id="btn-signin">
-                        <i class="fa-solid fa-user"></i>
+    <a href="#" className="btn-signin" id="btn-signin">
+                        <i className="fa-solid fa-user"></i>
                         <span>Sign in / up</span>
                     </a>
-    </>
+           
+                    </>
    );
 }
  
