@@ -1,0 +1,20 @@
+.dropdownmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--clr-gray-100);  
+  width: 100%;
+  min-height: 0px;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  display: grid;
+  grid-template-rows: 0fr;
+
+  &.show {
+    grid-template-rows: 1fr;
+    transition: all 200ms ease-in-out;
+    min-height: 100px;
+    border: 1px solid black;
+
+  }
+}

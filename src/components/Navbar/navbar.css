@@ -1,9 +1,0 @@
-#navbar {
-  .container {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto auto;
-    gap: 1rem;
-  }
-
-}
