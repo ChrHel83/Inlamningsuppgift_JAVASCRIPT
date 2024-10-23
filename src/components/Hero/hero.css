@@ -1,51 +1,191 @@
 #hero {
-  .headline {
-    text-align: center;
-    padding: 1rem 0rem;
-    h1 {
-      font-size: 2.125rem;
-      font-weight: var(--font-weight-extrabold);
-      color: var(--clr-gray-900);
+    .headline {
+        text-align: center;
+        padding: 1rem 0rem;
+        h1 {
+            font-size: 2.125rem;
+            font-weight: var(--font-weight-extrabold);
+            color: var(--clr-gray-900);
+        }
     }
-  }
-  .content {
-    text-align: center;
-
-  }
-
-  span {
-    p {
-      display: inline;
-      font-size: 1.125rem;
-      line-height: 28.8px;
-      color: var(--clr-gray-700);
+    .content {
+        text-align: center;
     }
-  }
-  .buttons {
-    padding: 2.5rem 0rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .btn-download {
-    background-color: var(--clr-gray-900);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .discover-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding-block: 1rem 3rem;
-  }
-  .phones {
-    display: none;
-  }
-  
 
-  }
+    span {
+        p {
+            display: inline;
+            font-size: 1.125rem;
+            line-height: 28.8px;
+           color: var(--clr-gray-900);  
+        }
+    }
+    .buttons {
+        padding: 2.5rem 0rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .btn-download {
+        background-color: var(--clr-gray-900);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .discover-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-block: 1rem 3rem;
+        color: var(--clr-gray-700s);
+    }
+    .phones {
+        display: none;
+    }
 
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            padding-bottom: 0px;
+            gap: 1rem;
+            grid-template-columns: 43% 57%;
+            grid-template-areas: "headline headline" "content phones";
+        }
+        .headline {
+            grid-area: headline;
+            h1 {
+            font-size: 2.765rem;
+            padding-inline: 9rem;
+            }
+        }
+        span {
+            padding: 0;
+            p {
+              color: var(--clr-gray-700s); /* Färgen ändras inte i designfilen vid växling till darkmode */
+                display: block;
+            }
+        }
+        .content {
+            grid-area: content;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin-block: auto;
+            gap: 2rem;
+            padding-block: 5rem 3rem;
+        }
+        .discover-more {
+            justify-content: left;
+            padding: 0;
+        }
+        .buttons {
+            padding: 0;
+            flex-direction: row;
+            gap: 1rem;
+
+            img{
+                width: 90%;
+                margin: 0.2rem;
+            }
+        }
+        .btn-download {
+            width: 100%;
+        }
+        .phones {
+            grid-area: phones;
+            display: block;
+            /* overflow: auto; */
+            position: relative;
+            height: auto;
+            width: auto;
+            /* width: 417px;
+            height: 452px; */
+
+            .iphone-back {
+                position: absolute;
+                z-index: -10;
+                bottom: 0;
+                right:8rem;
+                width: 60%;
+            }
+            .iphone-front {
+                position: absolute;
+                z-index: -5;
+                bottom: 0;
+                right: 0;
+                width:60%;
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .container {
+            display: grid;
+            padding-bottom: 0px;
+            gap: 1rem;
+            grid-template-columns: 43% 57%;
+            grid-template-areas: "headline phones" "content phones";
+        }
+        .headline {
+            grid-area: headline;
+            padding-top: 5rem;
+            h1 {
+            font-size: 3.5rem;
+            padding-inline: 0rem;
+            text-align: left;
+            }
+        }
+        span {
+            p {
+                font-size: 1.125rem;
+            }
+        }
+        .content {
+            grid-area: content;
+
+            gap: 3rem;
+            padding-block: 0rem 4rem;
+        }
+        .discover-more {
+            justify-content: left;
+            padding-top: 14rem;
+        }
+        .buttons {
+            padding: 0;
+            flex-direction: row;
+            gap: 1.5rem;
+
+            img{
+                width: auto;
+                margin: 0.2rem;
+            }
+        }
+        .btn-download {
+            width: 11.25rem;
+            height: 3.25rem;
+        }
+        .phones {
+            grid-area: phones;
+            display: block;
+            overflow: auto;
+            position: relative;
+
+            .iphone-back {
+                position: absolute;
+                z-index: -10;
+                bottom: 0;
+                right:14.5rem;
+                width: auto;
+            }
+            .iphone-front {
+                position: absolute;
+                z-index: -5;
+                bottom: 0;
+                right: 0;
+                width:auto;
+            }
+        }
+    }
+}

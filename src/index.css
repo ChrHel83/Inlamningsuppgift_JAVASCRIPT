@@ -13,6 +13,7 @@ html {
     --clr-gray-500: #b4b7c9;
     --clr-gray-600: #9397ad;
     --clr-gray-700: #565973;
+    --clr-gray-700s: #565973;
     --clr-gray-800: #33354d;
     --clr-gray-900: #0b0f19;
 
@@ -34,6 +35,7 @@ html {
 .darkmode {
     color-scheme: dark;
     --clr-bg: black;
+    /* --clr-gray-100: #f3f6ff05; */
 
     --clr-gray-900: var(--clr-gray-100);
     --clr-gray-800: #ffffff;
@@ -106,7 +108,7 @@ img {
         align-items: center;
         grid-template-columns: 1fr auto auto;
         gap: 2rem;
-        padding-right: 2rem;
+        /* padding-right: 2rem; */
     }
 
     .btn-signin {
@@ -132,9 +134,13 @@ img {
 @media (min-width: 768px) {
     .container {
         width: 695px;
+
     }
 
     #navbar {
+        .container {
+            /* padding-right: 1rem; */
+        }
         .darkmode-switch .label {
             display: block;
         }
@@ -147,6 +153,7 @@ img {
             }
         }
     }
+
 }
 @media (min-width: 1400px) {
     .container {

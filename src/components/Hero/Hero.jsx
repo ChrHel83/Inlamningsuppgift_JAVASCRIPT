@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./hero.css";
+import BtnRound from "../utilities/BtnRound";
 
 const Hero = () => {
     const [isDarkmode, setIsDarkMode] = useState(document.body.parentElement.classList.contains("darkmode"));
@@ -16,25 +17,28 @@ const Hero = () => {
                         <p>Save, spend & manage money in your pocket.</p>
                     </span>
                     <div className="buttons">
+                        <a href="#">
                         <div className="btn-download">
                             <img src="./public/appstore-light.svg" className="lightmode-img" alt="App Store" />
                             <img src="./public/appstore-dark.svg" className="darkmode-img" alt="App Store" />
                         </div>
+                        </a>
+                        <a href="#">
                         <div className="btn-download">
                             <img src="./public/googleplay-light.svg" className="lightmode-img" alt="Google Play" />
                             <img src="./public/googleplay-dark.svg" className="darkmode-img" alt="Google Play" />
                         </div>
+                        </a>
+
                     </div>
                     <div className="discover-more">
-                        <div className="btn-round">
-                            <i className="fa-solid fa-chevron-down"></i>
-                        </div>
+                        <BtnRound />
                         <p>Discover more</p>
                     </div>
                 </div>
                 <div className="phones">
-                    <img className="iphone_front" src="./public/iphone_front.png" alt="iPhone with creditcard" />
-                    <img className="iphone_back" src="./public/iphone_back.png" alt="iPhone with creditcard" />
+                    <img className="iphone-front" src="./public/iphone_front.png" alt="iPhone with creditcard" />
+                    <img className="iphone-back" src="./public/iphone_back.png" alt="iPhone with creditcard" />
                 </div>
             </div>
         </section>
