@@ -3,6 +3,7 @@ const Navlinks = () => {
   const links = [
     {title: "Features", url: "#features", target: "", id : 0},
     {title: "Contacts", url: "contacts.html", target: "", id : 1},
+    // {title: "Contacts", url: "contacts.html", target: "", id : 1},
   ];
 
   

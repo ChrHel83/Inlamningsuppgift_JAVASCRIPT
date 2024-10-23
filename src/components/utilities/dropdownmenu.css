@@ -8,9 +8,7 @@ background-color: var(--clr-gray-500);
     opacity: 0.3;
     color: var(--clr-gray-200);
   }
-  @media(width >= 1400px){
-    display: none;
-  }
+
   .navlinks,.btn-signin{
     display: flex !important;
   }

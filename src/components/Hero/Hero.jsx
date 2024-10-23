@@ -5,6 +5,7 @@ import BtnRound from "../utilities/BtnRound";
 const Hero = () => {
     const [isDarkmode, setIsDarkMode] = useState(document.body.parentElement.classList.contains("darkmode"));
 
+
     return (
         <section id="hero">
             <div className="container">

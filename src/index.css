@@ -99,6 +99,7 @@ img {
     padding: 0.8rem;
 }
 
+
 #navbar {
     position: relative;
     width: 100%;
@@ -138,9 +139,6 @@ img {
     }
 
     #navbar {
-        .container {
-            /* padding-right: 1rem; */
-        }
         .darkmode-switch .label {
             display: block;
         }
@@ -159,12 +157,16 @@ img {
     .container {
         width: 1320px;
     }
+
     #navbar {
         .container {
             grid-template-columns: auto 1fr auto auto;
             padding-right: 0.5rem;
         }
 
+        .dropdownmenu {
+            display: none;
+        }
         .burgermenu {
             display: none;
         }
