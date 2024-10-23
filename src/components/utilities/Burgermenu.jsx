@@ -1,25 +1,25 @@
+import { useState } from "react";
 import "./burgermenu.css";
 
 const Burgermenu = () => {
+
+  function openMenu() {
+    document.querySelector('.dropdownmenu').setAttribute('aria-expanded',true);    
+    document.querySelector('.dropdownmenu').classList.remove('hide');    
+
+  }
+  function closeMenu() {
+    document.querySelector('.dropdownmenu').setAttribute('aria-expanded',false);
+  }
   
-
-  const openMenu = () => {
-    document.querySelector(".dropdownmenu").classList.add('show');
-  }
-  const closeMenu = () => {
-    document.querySelector(".dropdownmenu").classList.remove('show');
-  }
-
   function handleClick(){
-    const isOpen = document.querySelector(".dropdownmenu").classList.contains("show");
-    isOpen ? closeMenu() : openMenu();
-
-    
+    const isMenuVisible = document.querySelector(".dropdownmenu").getAttribute('aria-expanded') ==='true';
+    isMenuVisible ? closeMenu() : openMenu();
   }
 
   return ( 
   
-    <i onClick={handleClick} className="burgermenu fa-solid fa-bars" />
+    <i onClick={handleClick} id="burgermenu" className="burgermenu fa-solid fa-bars" />
 
    );
 }
