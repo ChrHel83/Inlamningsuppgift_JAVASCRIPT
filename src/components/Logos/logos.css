@@ -1,0 +1,35 @@
+#logos {
+  img {
+    width: 100%;
+
+  }
+  .container {
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    padding-inline: 0.2rem;
+    padding-block: 3rem;
+
+  }
+  .img-container {
+    &:last-child{
+      display: none;
+    }
+    &:nth-last-child(2){
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem 1rem;
+    border: 1px solid var(--clr-gray-300);
+    border-radius: 0.5rem;
+    color: var(--clr-gray-500);
+
+    &:hover {
+      box-shadow: 1px 3px 3px 1px var(--clr-gray-500);
+    }
+  }
+
+}

@@ -99,7 +99,6 @@ img {
     padding: 0.8rem;
 }
 
-
 #navbar {
     position: relative;
     width: 100%;
@@ -131,11 +130,13 @@ img {
 .darkmode-img {
     display: none;
 }
+#logos {
+    display: none;
+}
 
 @media (min-width: 768px) {
     .container {
         width: 695px;
-
     }
 
     #navbar {
@@ -151,8 +152,11 @@ img {
             }
         }
     }
-
+    #logos {
+        display: block;
+    }
 }
+
 @media (min-width: 1400px) {
     .container {
         width: 1320px;
@@ -175,6 +179,23 @@ img {
         }
         .navlinks {
             display: flex;
+        }
+    }
+    #logos {
+        .container {
+            justify-content: space-between;
+            padding-inline: 0;
+            padding-block: 5rem !important;
+        
+          }
+        .img-container {
+            &:last-child {
+                display: block !important;
+            }
+            &:nth-last-child(2) {
+                display: block !important;
+            }
+            padding: 1.5rem 1.5rem !important;
         }
     }
 }
