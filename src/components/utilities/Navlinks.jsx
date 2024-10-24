@@ -9,7 +9,7 @@ const Navlinks = () => {
   
   return ( 
     <div className="navlinks">
-    {links.map(link => <a href={link.url} key={link.id} target={link.target}>{link.title}</a>)}
+    {links.map((link, index) => <a href={link.url} key={index} target={link.target}>{link.title}</a>)}
     </div>
    );
 }

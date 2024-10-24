@@ -1,0 +1,95 @@
+.slider {
+    padding-top: 1rem;
+    background-color: var(--clr-gray-100);
+    .container {
+        position: relative;
+        display: grid;
+
+        gap: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+    .slide-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .img-container {
+        height: auto;
+    }
+
+    .headline {
+        font-size: 1.75rem;
+        font-weight: var(--font-weight-extrabold);
+        padding-block: 2rem;
+    }
+    .slide {
+      p, span {
+        background-color: var(--clr-gray-100);
+      }
+        width: 20rem;
+        img {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        display: grid;
+
+        .heading {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+    .s-1 {
+        position: absolute;
+        opacity: 1;
+        /* background-color: red; */
+        /* animation-name: fadeInOut1; */
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+    .s-2 {
+        opacity: 0;
+        position: absolute;
+        /* background: yellow; */
+        animation-name: fadeInOut2;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+    .s-3 {
+        opacity: 0;
+        position: absolute;
+        /* background: green; */
+        animation-name: fadeInOut3;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes fadeInOut1 {
+    0% {opacity: 0;}
+    5% {opacity: 100%;}
+    35% {opacity: 100%;}
+    42% {opacity: 0%;}
+    70% {opacity: 0%;}
+    77% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+@keyframes fadeInOut2 {
+  0% {opacity: 0;}
+  7% {opacity: 0%;}
+  35% {opacity: 0%;}
+  42% {opacity: 100%;}
+  70% {opacity: 100%;}
+  77% {opacity: 0%;}
+  100% {opacity: 0%;}
+}
+@keyframes fadeInOut3 {
+  0% {opacity: 0%;}
+  7% {opacity: 0%;}
+  35% {opacity: 0%;}
+  42% {opacity: 0%;}
+  70% {opacity: 0%;}
+  77% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+
