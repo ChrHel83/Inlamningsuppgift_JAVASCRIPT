@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Logos from "./components/Logos/Logos";
+import AppFeatures from "./components/AppFeatures/AppFeatures";
 
 
 
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")).render(
             </header>
             <main>
                 <Logos />
+                <AppFeatures />
             </main>
             <footer>
                 <Footer />

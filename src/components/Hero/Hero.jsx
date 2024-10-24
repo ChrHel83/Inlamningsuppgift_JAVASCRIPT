@@ -7,7 +7,7 @@ const Hero = () => {
 
 
     return (
-        <section id="hero">
+        <section className="hero" id="hero">
             <div className="container">
                 <div className="headline">
                     <h1>Manage All Your Money in One App</h1>

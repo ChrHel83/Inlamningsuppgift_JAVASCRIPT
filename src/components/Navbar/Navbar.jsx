@@ -8,7 +8,7 @@ import DropDownMenu from "../utilities/dropdownmenu";
 
 const Navbar = () => {
     return (
-        <div id="navbar">
+        <div className="navbar" id="navbar">
             <div className="container">
                 <Mainlogo />
                 <Navlinks />

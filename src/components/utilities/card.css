@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    gap: 1.2rem;
+
+    .card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.75rem;
+        height: 3.75rem;
+        aspect-ratio: 1;
+        background-color: var(--clr-primary-gradient);
+        border-radius: 0.5rem;
+    }
+    .card-info {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .card-headline {
+        font-size: 1.25rem;
+        font-weight: var(--font-weight-extrabold);
+    }
+    .card-text{
+      font-size: 1rem;
+      color: var(--clr-gray-700);
+
+    }
+}
