@@ -1,0 +1,44 @@
+.navbar {
+  position: relative;
+  width: 100%;
+  .container {
+      position: relative;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr auto auto;
+      gap: 2rem;
+      /* padding-right: 2rem; */
+  }
+
+  .btn-signin {
+      display: none;
+  }
+  .navlinks {
+      display: none;
+  }
+  .darkmode-switch .label {
+      display: none;
+  }
+}
+
+@media (min-width: 1400px){
+    .navbar {
+        .container {
+            grid-template-columns: auto 1fr auto auto;
+            padding-right: 0.5rem;
+        }
+
+        .dropdownmenu {
+            display: none;
+        }
+        .burgermenu {
+            display: none;
+        }
+        .btn-signin {
+            display: flex;
+        }
+        .navlinks {
+            display: flex;
+        }
+    }
+}

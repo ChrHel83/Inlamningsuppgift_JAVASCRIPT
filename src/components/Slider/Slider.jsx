@@ -5,43 +5,30 @@ const Slider = () => {
     return (
         <section className="slider">
             <div className="container">
-
                 <div className="headline">How Does It Work?</div>
-
-                <div className="slide-container">
-
-                <div className="slide s-0">
-                    <div className="img-container">
-                        <img src="./public/slide_0.png" alt="" />
+                <div className="slider-container">
+                    <div className="s-1 slide">
+                        <img src="public/slide_1.png" alt="" />
+                        <div className="content">
+                            <p>Latest transaction history</p>
+                            <span>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. </span>
+                        </div>
                     </div>
-                          <p className="heading"></p>
-                    <span></span>
-                </div>
-
-                <div className="slide s-1">
-                    <div className="img-container">
-                        <img src="./public/slide_1.png" alt="" />
+                    <div className="s-2 slide ">
+                        <img src="public/slide_2.png" alt="" />
+                        <div className="content">
+                            <p>Transfers to people from your contact list</p>
+                            <span>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</span>
+                        </div>
                     </div>
-                          <p className="heading">Ribrik till steg 1</p>
-                    <span>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</span>
-                </div>
-
-                <div className="slide s-2">
-                    <div className="img-container">
-                        <img src="./public/slide_2.png" alt="" />
+                    <div className="s-3 slide ">
+                        <img src="public/slide_3.png" alt="" />
+                        <div className="content">
+                            <p>Step 3. Transfers to people from your contact list</p>
+                            <span>Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</span>
+                        </div>
                     </div>
-                <p className="heading">Latest transaction history</p>
-                    <span>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</span>
                 </div>
-
-                <div className="slide s-3">
-                    <div className="img-container">
-                        <img src="./public/slide_3.png" alt="" />
-                    </div>
-                    <p className="heading">Text till slide 3</p>
-                    <span>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</span>
-                </div>
-            </div>
             </div>
         </section>
     );

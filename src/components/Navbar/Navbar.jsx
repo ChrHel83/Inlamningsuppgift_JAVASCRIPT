@@ -5,6 +5,7 @@ import Navlinks from "../utilities/Navlinks";
 import BtnSignin from "../utilities/BtnSignin";
 import Burgermenu from "../utilities/Burgermenu";
 import DropDownMenu from "../utilities/dropdownmenu";
+import "./navbar.css";
 
 const Navbar = () => {
     return (
