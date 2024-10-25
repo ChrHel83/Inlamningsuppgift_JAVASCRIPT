@@ -1,6 +1,139 @@
 .features {
-  display: flex;
-  background-color: #f3f2f2;
 
-  height: 100%;
+    padding-block: 6rem;
+    /* padding-bottom: 2rem; */
+    /* display: grid; */
+
+    .btn-primary {
+        color: #fff;
+        height: 2.25rem;
+        width: 8.75rem;
+        background-color: var(--clr-primary);
+        border-radius: 8px;
+        padding: 0.6em 1em;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 0.8rem;
+        text-decoration: none;
+        cursor: pointer;
+        text-wrap: nowrap;
+
+        span {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-color: var(--clr-gray-100);
+            color: var(--clr-primary);
+            text-decoration: none;
+            border: 1px solid var(--clr-primary);
+        }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 80%;
+      justify-content: space-evenly;
+      margin-inline: auto;
+
+
+        .content-1 {
+            position: relative;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .content-2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding-top: 3.6rem;
+        }
+    }
+    aside {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-inline: 0.5rem;
+    }
+    h2 {
+        margin: 0;
+        font-size: 32px;
+    }
+    ul {
+        padding: 0px;
+
+        margin: 0px;
+        li {
+            position: relative;
+            list-style-type: none;
+            padding-left: 2rem;
+            padding-block: 0.5rem;
+        }
+        li:before {
+            content: " ";
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-30%);
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-image: url("../public/bx-check-circle.svg");
+            background-repeat: no-repeat;
+
+            p {
+                display: inline-flex;
+            }
+        }
+    }
+    .image-1 {
+        width: 100%; 
+        padding-bottom: 3rem;
+        margin: 0;
+        display: relative;
+        justify-content: left;
+
+        .users {
+            position: absolute;
+            bottom: -10px;
+            right: 0px;
+        }
+    }
+    .cards {
+        display: flex;
+        padding-top: 0;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding-inline: 0rem;
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--clr-primary-gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-img {
+            img {
+                display: flex;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (width <= 1400px) {
+  .features {
+    display: none;
+  }
 }

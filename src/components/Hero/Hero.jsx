@@ -32,10 +32,12 @@ const Hero = () => {
                         </a>
 
                     </div>
+                    <a href="#slider">
                     <div className="discover-more">
                         <BtnRound />
                         <p>Discover more</p>
                     </div>
+                    </a>
                 </div>
                 <div className="phones">
                     <img className="iphone-front" src="./public/iphone_front.png" alt="iPhone with creditcard" />
