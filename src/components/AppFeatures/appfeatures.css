@@ -6,6 +6,7 @@
         align-items: center;
         gap: 2rem;
         padding-inline: 0.7rem;
+        padding-block: 3rem;
     }
     .phone-container {
         grid-area: phone;

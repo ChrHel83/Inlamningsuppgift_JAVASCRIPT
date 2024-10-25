@@ -25,7 +25,7 @@ const Testimonials = () => {
                 <ReviewCard key={testimony.id}
                 author={testimony.author}
                   jobRole={testimony.jobRole}
-                  starRating={testimony.starRating} avatarUrl={testimony.avatarURL}
+                  starRating={testimony.starRating} avatarUrl={testimony.avatarUrl}
                   comment={testimony.comment}
               />           
                 ))}

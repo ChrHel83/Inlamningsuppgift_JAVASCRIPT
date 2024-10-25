@@ -1,5 +1,22 @@
-const ReviewCard = ({author, jobRole, starRating, avatarUrl, comment}) => {
-    console.log(avatarUrl);
+const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment }) => {
+    // console.log(avatarUrl);
+
+    const getNumberOfStars = (rating) => {
+        let starString = [];
+        const filledStar = <i class="fa-solid fa-star"></i>;
+        const emptyStar = <i class="fa-regular fa-star"></i>;
+
+        for (let i = 0; i < 5; i++) {
+            if (rating > i) {
+                starString.push(filledStar);
+            } else {
+                starString.push(emptyStar);
+            }
+        }
+        return starString;
+    };
+
+    const starString = getNumberOfStars(starRating);
 
     return (
         <div className="review-cards">
@@ -8,13 +25,7 @@ const ReviewCard = ({author, jobRole, starRating, avatarUrl, comment}) => {
                     <img src="public//q-mark.svg" alt="" />
                 </div>
 
-                <div className="grades">
-                    <img src="public/star.svg" alt="" />
-                    <img src="public/star.svg" alt="" />
-                    <img src="public/star.svg" alt="" />
-                    <img src="public/star.svg" alt="" />
-                    <img src="public/star_null.svg" alt="" />
-                </div>
+                <div className="grades">{starString.map(star => star)}</div>
 
                 <div className="review-text">{comment}</div>
                 <div className="user-info">

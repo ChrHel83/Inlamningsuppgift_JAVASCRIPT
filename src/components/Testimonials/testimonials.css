@@ -1,11 +1,14 @@
 .testimonials {
-  /* display: none; */
+  background-color: var(--clr-bg-gray);
+  @media (width <= 1400px) {
+  display: none;
+  }
   padding: 5rem;
 
-  background-color: var(--clr-gray-100);
+
   .container {
       display: flex;
-      gap: 7rem;
+      gap: 4rem;
   }
   .heading {
       margin: 0;
@@ -51,10 +54,15 @@
   .user-info {
       display: flex;
       gap: 0.8rem;
-      .user-txtinfo {
-          /* font-size: ;
-          font-weight: ; */
-      }
+
+  }
+  .grades {
+    font-size: 0.8rem;
+    display: flex;
+    color: var(--clr-gray-500);
+    .fa-solid {
+      color: #FFBA08;
+    }
   }
   .user-textinfo {
       display: flex;
