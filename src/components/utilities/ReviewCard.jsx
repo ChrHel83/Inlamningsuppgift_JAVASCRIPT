@@ -3,8 +3,9 @@ const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment }) => {
 
     const getNumberOfStars = (rating) => {
         let starString = [];
-        const filledStar = <i class="fa-solid fa-star"></i>;
-        const emptyStar = <i class="fa-regular fa-star"></i>;
+
+        const filledStar = <i className="fa-solid fa-star"></i>;
+        const emptyStar = <i className="fa-regular fa-star"></i>;
 
         for (let i = 0; i < 5; i++) {
             if (rating > i) {
@@ -25,7 +26,7 @@ const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment }) => {
                     <img src="public//q-mark.svg" alt="" />
                 </div>
 
-                <div className="grades">{starString.map(star => star)}</div>
+                <div className="grades">{starString.map((star)  => star)}</div>
 
                 <div className="review-text">{comment}</div>
                 <div className="user-info">
