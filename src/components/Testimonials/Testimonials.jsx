@@ -16,18 +16,18 @@ const Testimonials = () => {
     }, []);
 
     return (
-  
+    
         <section className="testimonials">
             <div className="container">
                 <h2 className="heading">Clients are Loving Our App</h2>
                 {testimonials.map((testimony) => (
-                 
-                <ReviewCard key={testimony.id}
+              
+                <ReviewCard
                 author={testimony.author}
                   jobRole={testimony.jobRole}
                   starRating={testimony.starRating} avatarUrl={testimony.avatarUrl}
                   comment={testimony.comment}
-              />           
+              />          
                 ))}
 
             </div>

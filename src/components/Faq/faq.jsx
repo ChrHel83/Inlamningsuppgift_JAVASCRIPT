@@ -1,7 +1,23 @@
-import FaqList from "../utilities/FaqList";
+import { useState, useEffect } from "react";
+import FaqListItem from "../utilities/FaqListItem";
 import "./faq.css";
 
 const Faq = () => {
+    const [faqs, setFaqs] = useState([]);
+
+    useEffect(() => {
+        fetch("https://win24-assignment.azurewebsites.net/api/faq")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                return setFaqs(data);
+            })
+            .catch((e) => {
+                console.log("Error: " + e);
+            });
+    }, []);
+
     return (
         <section className="faq">
             <div className="container">
@@ -29,7 +45,7 @@ const Faq = () => {
                         </a>
                     </div>
                 </div>
-                <FaqList />
+                <div className="faq-list">{faqs.length > 0 && faqs.map((faq) => <FaqListItem content={faq} key={faq.id} />)}</div>
             </div>
         </section>
     );
