@@ -38,7 +38,7 @@ html {
     color-scheme: dark;
     --clr-bg: black;
     --clr-bg-gray: rgb(18,18,18);
-    --clr-primary-gradient: rgba(99, 101, 241, 0.08);
+    --clr-primary-gradient: rgba(99, 101, 241, 0.10);
     /* --clr-gray-100: #f3f6ff05; */
     --clr-gray-900: var(--clr-gray-100);
     --clr-gray-800: #ffffff;

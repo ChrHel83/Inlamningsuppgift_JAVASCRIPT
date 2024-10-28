@@ -4,7 +4,7 @@
 
   .question {
 
-    
+    /* background-color: --clr-primary-gradient; */
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-areas: "title button" "content content";
@@ -61,7 +61,7 @@
     font-size: 0.8rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--clr-gray-100);
+    background-color: var(--clr-primary-gradient);
     color: var(--clr-black);
     border-radius: 50%;
     width: 2.25rem;

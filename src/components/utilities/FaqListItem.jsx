@@ -13,18 +13,20 @@ const FaqListItem = ({ content }) => {
         document.getElementById(question).lastChild.classList.remove("expand");
     };
     const closeAllQuestions = (question) => {
-        document.getElementById(question).querySelector(".btn-arrow").classList.remove("open");
+        document.querySelectorAll(".btn-arrow").forEach((btn) => {
+            btn.classList.remove("open");
+        });
+        document.querySelectorAll(".answer").forEach((btn) => {
+            btn.classList.remove("expand");
+        });
     };
 
     const handleClick = (e) => {
         const currentQuestion = e.target.closest("article").id;
-        const isArrowUp = document.getElementById(currentQuestion).querySelector(".btn-arrow").classList.contains("open");
-        // closeAllQuestions(currentQuestion);
-        if (isArrowUp) {
-            closeQuestion(currentQuestion);
-        } else {
-            openQuestion(currentQuestion);
-        }
+        const isOpen = document.getElementById(currentQuestion).querySelector(".btn-arrow").classList.contains('open');
+closeAllQuestions();
+        isOpen ? closeQuestion(currentQuestion) : openQuestion(currentQuestion);
+
     };
 
     return (
