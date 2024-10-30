@@ -45,7 +45,7 @@ const Faq = () => {
                         </a>
                     </div>
                 </div>
-                <div className="faq-list">{faqs.length > 0 && faqs.map((faq) => <FaqListItem content={faq} key={faq.id} />)}</div>
+                <div className="faq-list">{faqs.length > 0 ? faqs.map((faq) => <FaqListItem content={faq} key={faq.id} />) : <h1 className="ErrorMSG pt2">Sorry...Couldn't load the FAQ's</h1>}</div>
             </div>
         </section>
     );

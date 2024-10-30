@@ -10,8 +10,8 @@ import AppFeatures from "./components/AppFeatures/AppFeatures";
 import Slider from "./components/Slider/Slider";
 import Features from "./components/Features/Features";
 import Testimonials from "./components/Testimonials/Testimonials";
-import Faq from "./components/faq/faq";
-
+import Faq from "./components/Faq/faq";
+import Subscribe from "./components/Subscribe/Subscribe";
 
 
 
@@ -29,6 +29,7 @@ createRoot(document.getElementById("root")).render(
                 <Features />
                 <Testimonials />
                 <Faq />
+                <Subscribe />
             </main>
             <footer>
                 <Footer />
