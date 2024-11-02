@@ -7,6 +7,7 @@
     display: grid;
     overflow: hidden;
     gap: 2rem;
+    padding-block: 2rem 3rem;
 
     .long-txt {
       display: none;
@@ -26,11 +27,13 @@
       gap: 1rem;
       padding-top: 2rem;
     }
+
     .input-subscribe {
       position: relative;
       /* margin-inline: auto; */
       color: var(--clr-gray-600);
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto;
       /* width:100%; */
       .input-email {
         padding-left: 3rem;

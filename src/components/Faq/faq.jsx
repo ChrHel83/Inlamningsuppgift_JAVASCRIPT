@@ -46,6 +46,12 @@ const Faq = () => {
                     </div>
                 </div>
                 <div className="faq-list">{faqs.length > 0 ? faqs.map((faq) => <FaqListItem content={faq} key={faq.id} />) : <h1 className="ErrorMSG pt2">Sorry...Couldn't load the FAQ's</h1>}</div>
+
+                <div className="contact-link">
+                    <div className="contact-btn">
+                        <p>Contact us now</p>
+                    </div>
+                </div>
             </div>
         </section>
     );
