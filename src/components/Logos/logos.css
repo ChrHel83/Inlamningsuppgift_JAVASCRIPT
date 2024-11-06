@@ -14,6 +14,8 @@
 
   }
   .img-container {
+    width: 9.875rem;
+    height: 6.19rem;
     &:last-child{
       display: none;
     }
@@ -37,6 +39,8 @@
   @media (min-width: 1400px){
 
       .img-container {
+        width: 12.25rem;
+        height: 6.25rem;
           &:last-child {
               display: inline-block;
           }

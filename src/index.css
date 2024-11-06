@@ -43,6 +43,7 @@ html {
     --clr-gray-900: var(--clr-gray-100);
     --clr-gray-800: #ffffff;
     --clr-gray-700: #ffffff;
+    --clr-gray-400: #d4d7e5;
 
     --clr-black: white;
     --clr-white: black;
