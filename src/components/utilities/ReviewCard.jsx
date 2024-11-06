@@ -1,4 +1,4 @@
-const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment}) => {
+const ReviewCard = ({ key, author, jobRole, starRating, avatarUrl, comment}) => {
     // console.log(avatarUrl);
 
     const getNumberOfStars = (rating) => {
@@ -20,12 +20,11 @@ const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment}) => {
     const starString = getNumberOfStars(starRating);
 
     return (
-        <div className="review-cards">
-            <div className="review-card">
-                <div className="quotation">
-                    <img src="public//q-mark.svg" alt="" />
-                </div>
 
+            <div className="review-card" key={key}>
+                <div className="quotation">
+                    <img src="public/q-mark.svg" alt="" />
+                </div>
                 <div className="grades">{starString}</div>
 
                 <div className="review-text">{comment}</div>
@@ -42,7 +41,7 @@ const ReviewCard = ({ author, jobRole, starRating, avatarUrl, comment}) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     );
 };

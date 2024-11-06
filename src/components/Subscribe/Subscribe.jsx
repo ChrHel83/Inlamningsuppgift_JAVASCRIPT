@@ -1,6 +1,14 @@
 import "./subscribe.css";
 
 const Subscribe = () => {
+
+
+const handleClick = () => {
+    console.log("Clicker")
+}
+
+
+
     return (
         <section className="subscribe">
             <div className="container">
@@ -14,7 +22,7 @@ const Subscribe = () => {
                 <div className="input-subscribe">
                 <i className="fa-regular fa-envelope envelope"></i>
                 <input type="email" className="input-email" placeholder="Your email" />
-                <div className="btn-subscribe">Subscribe</div>
+                <div className="btn-subscribe" onClick={handleClick}>Subscribe</div>
                 </div>
 
  

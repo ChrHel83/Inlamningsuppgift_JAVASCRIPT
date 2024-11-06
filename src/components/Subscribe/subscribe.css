@@ -1,7 +1,7 @@
 .subscribe {
   width: 100%;
   .container {
-    background-color: var(--clr-gray-100);
+    background-color: var(--clr-gray);
     border-radius: 0.5rem;
     /* margin-inline: auto; */
     display: grid;
@@ -41,8 +41,12 @@
         font-family: "Manrope", sans-serif;
         font-weight: var(--font-weight-regular);
         color: var(--clr-gray-500);
+        background-color: white;
+        border: none;
         border-radius: 0.5rem 0 0 0.5rem;
-        border: 1px solid var(--clr-gray-400);
+        border-top: 1px solid var(--clr-gray-400);
+        border-left: 1px solid var(--clr-gray-400);
+        border-bottom: 1px solid var(--clr-gray-400);
       }
 
       .envelope {

@@ -11,25 +11,28 @@ const Testimonials = () => {
             })
             .then((data) => {
                 setTestimonials(data);
-                
+                console.log(data)
+
             });
     }, []);
 
     return (
-    
+
         <section className="testimonials">
             <div className="container">
                 <h2 className="heading">Clients are Loving Our App</h2>
-                {testimonials.length > 0 ? testimonials.map((testimony) => (
-              
-                <ReviewCard
-                author={testimony.author}
-                  jobRole={testimony.jobRole}
-                  starRating={testimony.starRating} avatarUrl={testimony.avatarUrl}
-                  comment={testimony.comment}
-              />          
-                )) : <h1 className="ErrorMSG">Sorry... Couldn't get the testimonials</h1>}
+                <div className="review-cards">
+                    {testimonials.length > 0 ? testimonials.map((testimony) => (
 
+                        <ReviewCard
+                            key={testimony.id}
+                            author={testimony.author}
+                            jobRole={testimony.jobRole}
+                            starRating={testimony.starRating} avatarUrl={testimony.avatarUrl}
+                            comment={testimony.comment}
+                        />
+                    )) : <h1 className="ErrorMSG">Sorry... Couldn't get the testimonials</h1>}
+                </div>
             </div>
         </section>
     );
