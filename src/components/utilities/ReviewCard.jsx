@@ -1,6 +1,6 @@
-const ReviewCard = ({ key, author, jobRole, starRating, avatarUrl, comment}) => {
-    // console.log(avatarUrl);
+const ReviewCard = ({key, author, jobRole, starRating, avatarUrl, comment}) => {
 
+console.log(key)
     const getNumberOfStars = (rating) => {
         let starString = [];
 
@@ -18,7 +18,6 @@ const ReviewCard = ({ key, author, jobRole, starRating, avatarUrl, comment}) => 
     };
 
     const starString = getNumberOfStars(starRating);
-
     return (
 
             <div className="review-card" key={key}>

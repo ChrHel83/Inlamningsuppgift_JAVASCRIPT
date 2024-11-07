@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import FaqListItem from "../utilities/FaqListItem";
 import "./faq.css";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
     const [faqs, setFaqs] = useState([]);
@@ -17,6 +18,7 @@ const Faq = () => {
                 console.log("Error: " + e);
             });
     }, []);
+
 
     return (
         <section className="faq">
@@ -48,9 +50,11 @@ const Faq = () => {
                 <div className="faq-list">{faqs.length > 0 ? faqs.map((faq) => <FaqListItem content={faq} key={faq.id} />) : <h1 className="ErrorMSG pt2">Sorry...Couldn't load the FAQ's</h1>}</div>
 
                 <div className="contact-link">
+                    <Link to="./Contacts">
                     <div className="contact-btn">
                         <p>Contact us now</p>
                     </div>
+                    </Link>
                 </div>
             </div>
         </section>

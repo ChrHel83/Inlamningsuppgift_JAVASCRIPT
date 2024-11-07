@@ -1,38 +1,35 @@
 import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Logos from "./components/Logos/Logos";
-import AppFeatures from "./components/AppFeatures/AppFeatures";
-import Slider from "./components/Slider/Slider";
-import Features from "./components/Features/Features";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Faq from "./components/faq/faq";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contacts from "./views/Contacts";
+import Home from "./views/Home";
+
 
 
 
 function App() {
 
     return (
+                <BrowserRouter>
         <div className="wrapper">
             <header>
                 <Navbar />
-                <Hero />
+                {/* <Hero /> */}
             </header>
             <main>
-                <Logos />
-                <AppFeatures />
-                <Slider />
-                <Features />
-                <Testimonials />
-                <Faq />
-                <Subscribe />
+                <Routes>
+                    <Route path ="/" element={<Home />}/>
+                    <Route path ="/contacts" element={<Contacts />}/>
+                </Routes>
+                
+
             </main>
             <footer>
                 <Footer />
             </footer>
         </div>
+                </BrowserRouter>
     );
 };
 

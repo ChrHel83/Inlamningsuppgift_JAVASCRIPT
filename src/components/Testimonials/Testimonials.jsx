@@ -11,11 +11,9 @@ const Testimonials = () => {
             })
             .then((data) => {
                 setTestimonials(data);
-                console.log(data)
-
+                
             });
     }, []);
-
     return (
 
         <section className="testimonials">
@@ -23,10 +21,8 @@ const Testimonials = () => {
                 <h2 className="heading">Clients are Loving Our App</h2>
                 <div className="review-cards">
                     {testimonials.length > 0 ? testimonials.map((testimony) => (
-
-                        <ReviewCard
-                            key={testimony.id}
-                            author={testimony.author}
+                        
+                        <ReviewCard key={testimony.id} author={testimony.author}
                             jobRole={testimony.jobRole}
                             starRating={testimony.starRating} avatarUrl={testimony.avatarUrl}
                             comment={testimony.comment}
