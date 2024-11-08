@@ -1,6 +1,7 @@
+import React, { useState } from "react";
+
 const ReviewCard = ({key, author, jobRole, starRating, avatarUrl, comment}) => {
 
-console.log(key)
     const getNumberOfStars = (rating) => {
         let starString = [];
 
@@ -17,7 +18,9 @@ console.log(key)
         return starString;
     };
 
-    const starString = getNumberOfStars(starRating);
+    const [starString, setStarString] = useState(getNumberOfStars(starRating));
+
+
     return (
 
             <div className="review-card" key={key}>
