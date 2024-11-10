@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ReviewCard = ({key, author, jobRole, starRating, avatarUrl, comment}) => {
+const ReviewCard = ({key, author, comment, avatarUrl, jobRole, starRating}) => {
 
     const getNumberOfStars = (rating) => {
         let starString = [];
