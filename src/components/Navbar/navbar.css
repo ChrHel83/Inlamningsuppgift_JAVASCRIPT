@@ -1,5 +1,5 @@
 .navbar {
-  position: relative;
+  position: absolute;
   width: 100%;
   .container {
       position: relative;

@@ -1,0 +1,23 @@
+.location-cards {
+    display: grid;
+    gap: 3rem;
+
+    .location-card {
+      display: grid;
+        gap: 0.7rem;
+
+        .heading {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-extrabold);
+            padding-bottom: 1.5rem;
+        }
+        .info-line {
+            display: flex;
+            gap: 1rem;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

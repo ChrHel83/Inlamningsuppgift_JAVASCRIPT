@@ -1,12 +1,16 @@
 .breadcrumb {
+  background: var(--clr-bg-gray);
   .container {
+    /* position: relative; */
+    padding-top: 6rem;
+    
     display: flex;
     gap: 1rem;
     align-items: center;
     font-size: 1rem;
 
     .fa-house {
-      padding-inline: 0.5rem;
+      padding-right: 0.5rem;
       color: var(--clr-gray-600);
     }
     .fa-chevron-right {
