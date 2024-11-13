@@ -37,8 +37,8 @@ html {
 .darkmode {
     color-scheme: dark;
     --clr-bg: black;
-    --clr-bg-gray: rgba(19,19,19);
-    --clr-primary-gradient: rgba(99, 101, 241, 0.10);
+    --clr-bg-gray: rgba(19, 19, 19);
+    --clr-primary-gradient: rgba(99, 101, 241, 0.1);
     /* --clr-gray-100: #f3f6ff05; */
     --clr-gray-900: var(--clr-gray-100);
     --clr-gray-800: #ffffff;
@@ -80,11 +80,35 @@ body {
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
-.main-logo{
+.main-logo {
     z-index: 500;
 }
 
-.ErrorMSG{
+.subscribe-msg {
+    display: center;
+    margin-inline: auto;
+    background-color: var(--clr-primary);
+    color: var(--clr-gray-100);
+    width: 30rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--clr-gray-500);
+    border-radius: 0.5rem;
+}
+/* .message-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--clr-gray-600);
+    background-color: var(--clr-gray-200);
+    border-radius: 0.5rem;
+} */
+
+.ErrorMSG {
     background-color: rgba(218, 55, 55, 0.685);
     color: rgb(201, 182, 182);
     font-style: italic;
@@ -101,7 +125,6 @@ body {
     top: 50%;
     left: 2rem; */
 }
-
 
 a {
     color: var(--clr-gray-800);
@@ -121,7 +144,6 @@ img {
     margin-inline: auto;
     padding: 0.8rem;
 }
-
 
 #logo-default,
 .lightmode-img {
@@ -157,7 +179,6 @@ img {
     .logos {
         display: block;
     }
-
 }
 
 @media (min-width: 1400px) {
