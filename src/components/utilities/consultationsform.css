@@ -1,4 +1,17 @@
 .consultation-form {
+    .y-0 {
+        margin-bottom: 0.5rem;
+    }
+    .y-1 {
+        margin-bottom: 1rem;
+    }
+    .y-2 {
+        margin-bottom: 2rem;
+    }
+    h6 {
+        margin-top: 2rem;
+        text-align: center;
+    }
     width: 80%;
     /* height: 30rem; */
     border: 0px;
@@ -21,6 +34,14 @@
         top: 0rem;
         right: 0rem;
     }
+
+    .consultation-wrapper {
+        /* background-color: red; */
+        color: var(--clr-gray-800);
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+
 
     .form-heading {
         font-size: 2rem;

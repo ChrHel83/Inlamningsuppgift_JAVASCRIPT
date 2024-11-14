@@ -20,7 +20,7 @@ const Breadcrumb = () => {
                 {pathnames.map((value, index) => {
                     const to = `/${pathnames.slice(0, index + 1).join("/")}`;
 
-                    return <div key={to}><i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i>{index === pathnames.length - 1 ? <span className="link">{value.replace(/-/g, " ")}</span> : <Link className="link" to={to}>{value.replace(/-/g, " ")}</Link>}</div>;
+                    return <div key={to}><i className="fa-solid fa-chevron-right"></i><i className="fa-solid fa-chevron-right"></i>{index === pathnames.length - 1 ? <span className="link">{value.replace(/-/g, " ")}</span> : <Link className="link" to={to}>{value.replace(/-/g, " ")}</Link>}</div>;
                 })}
             </div>
         </section>

@@ -22,7 +22,7 @@ const Contacts = () => {
                             <div className="headline-2">Email Us</div>
                             <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
                             <div className="link">
-                                Leave a message<i class="fa-solid fa-arrow-right"></i>
+                                Leave a message<i className="fa-solid fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ const Contacts = () => {
                             <div className="headline-2">Careers</div>
                             <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
                             <div className="link">
-                                Send an application<i class="fa-solid fa-arrow-right"></i>
+                                Send an application<i className="fa-solid fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
