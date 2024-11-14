@@ -1,0 +1,72 @@
+.consultation-form {
+    width: 80%;
+    /* height: 30rem; */
+    border: 0px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 2px 1px var(--clr-gray-500);
+    color: var(--clr-gray-800);
+    background-color: var(--clr-white);
+    /* justify-self: center; */
+    margin-inline: auto;
+    .form-container {
+        padding: 3rem;
+        display: grid;
+    }
+    @media (min-width: 768px) {
+        width: 80%;
+    }
+    @media (min-width: 1400px) {
+        width: 40%;
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+    }
+
+    .form-heading {
+        font-size: 2rem;
+        font-weight: var(--font-weight-extrabold);
+        padding-bottom: 2rem;
+    }
+    .form-label {
+        padding-top: 1rem;
+        display: block;
+        font-size: 1rem;
+        font-weight: var(--font-weight-semibold);
+    }
+    .form-input {
+        border: 1px solid var(--clr-gray-400);
+        width: 100%;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        height: 32px;
+    }
+    select {
+        width: 100%;
+height: 32px;
+        border: 1px solid var(--clr-gray-400);
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        color: var(--clr-gray-500);
+        background: none;
+        padding-left: 0.5rem;
+    }
+    button {
+      cursor: pointer;
+        background-color: var(--clr-primary);
+        border-radius: 0.5rem;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        display: block;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 3.25rem;
+
+        &:hover {
+          background-color: var(--clr-gray-100);
+          color: var(--clr-primary);
+        }
+    }
+}

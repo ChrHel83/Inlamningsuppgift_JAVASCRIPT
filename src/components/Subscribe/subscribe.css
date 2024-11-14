@@ -1,6 +1,7 @@
 .subscribe {
     width: 100%;
     .container {
+        position: relative;
         background-color: var(--clr-bg-gray);
         color: white;
         border-radius: 0.5rem;
@@ -77,6 +78,18 @@
             }
 
 
+        }
+        .message-validation {
+            display: none;
+            position: absolute;
+            bottom: -1rem;
+            left: 5px;
+            z-index: 500;
+            color: red;
+            font-size: 0.8rem;
+            &.show {
+                display: block;
+            }
         }
     }
 

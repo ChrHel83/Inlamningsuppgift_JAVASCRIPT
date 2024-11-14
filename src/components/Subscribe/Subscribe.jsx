@@ -6,16 +6,18 @@ const Subscribe = () => {
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
+        document.querySelector('.message-validation').classList.remove('show');
         setFormInput({ ...formInput, [name]: value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
+        setSubmitted(false);
+    };
 
-        // Validering av formInput innan nästa steg...
-
+    const addSubscriber = () => {
         fetch("https://win24-assignment.azurewebsites.net/api/forms/subscribe", {
             method: "post",
             headers: {
@@ -23,24 +25,55 @@ const Subscribe = () => {
             },
             body: JSON.stringify(formInput),
         })
-            .then((res) => {
-                if (res.ok) {
-                    setSubmitted(true);
-                    setFormInput({ email: "" });
-                }
-            })
-            .catch((err) => {
-                // console.log(err)
-                console.log("Något gick fel");
-            });
+        .then((res) => {
+            if (res.ok) {
+                setSubmitted(true);
+                setFormInput({ email: "" });
+            }
+        });
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const email = formInput.email.trim();
+        // const mailPattern = /^[a-zA-Z0-9_-]+\@[a-zA-Z0-9.-]+\.[a-zA-z]{2, }$/;
+
+       console.log(mailPattern.test(email))
+        if(correctChar){
+            console.log("Fel texcka");
+        }
+        let isValid = true;
+
+        
+
+        if(email.length <= 4){
+            isValid = false;
+        }
+
+
+        if(!email.includes('@')){
+            isValid = false;
+        }
+        if(email.includes(' ')){
+            isValid = false;
+        }
+        if(!email.includes('.')){
+            isValid = false;
+        }
+
+        if(isValid){
+           addSubscriber();
+        }else{
+            document.querySelector('.message-validation').classList.add('show');
+        }
+ 
     };
 
     if (submitted) {
         return (
             <div className="container">
-                <div className="subscribe-msg">
-                    <h1>Thank you for subscribing</h1>
-                    {/* <button className="message-btn">OK</button> */}
+                <div className="subscribe-msg" onClick={handleClick}>
+                    <h1>Thanks for subscribing</h1>
+                    <h3>Click here to return</h3>
                 </div>
             </div>
         );
@@ -58,9 +91,12 @@ const Subscribe = () => {
                 <form onSubmit={handleSubmit} className="form-subscribe" noValidate>
                     <i className="fa-regular fa-envelope envelope"></i>
                     <input type="email" name="email" className="input-email" onChange={handleChange} required value={formInput.email} placeholder="Your Email" />
+                   
                     <button className="btn-subscribe" type="submit">
                         Subscribe
                     </button>
+                    
+                <div className="message-validation">The address must be in the format 'x@x.x'</div>
                 </form>
             </div>
         </section>

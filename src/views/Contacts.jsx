@@ -4,6 +4,7 @@ import "./contacts.css";
 import ConsultationsForm from "../components/utilities/ConsultationsForm";
 import Locations from "../components/utilities/Locations";
 import SocialmediaBar from "../components/utilities/SocialmediaBar";
+import MapLocations from "../components/utilities/MapLocations";
 
 const Contacts = () => {
     return (
@@ -43,16 +44,15 @@ const Contacts = () => {
             </section>
             <section className="locations">
                 <div className="container">
-                    <div className="map">
-                      <img className="position1" src="./public/position.svg" alt="position" />
-                      <img className="position2" src="./public/position.svg" alt="position" />
-                      
-                      </div>
+                <div className="container-locations">
+                    <MapLocations />
+     
                     <div className="content">
                       <Locations />
 
                         <SocialmediaBar />
                     </div>
+                </div>
                 </div>
             </section>
         </>

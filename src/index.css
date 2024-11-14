@@ -89,24 +89,15 @@ body {
     margin-inline: auto;
     background-color: var(--clr-primary);
     color: var(--clr-gray-100);
-    width: 30rem;
+    width: 60%;
     text-align: center;
     padding: 1rem;
     border: 1px solid var(--clr-gray-500);
     border-radius: 0.5rem;
+    cursor: pointer;
 }
-/* .message-btn {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 800;
-    color: var(--clr-gray-600);
-    background-color: var(--clr-gray-200);
-    border-radius: 0.5rem;
-} */
+
+
 
 .ErrorMSG {
     background-color: rgba(218, 55, 55, 0.685);

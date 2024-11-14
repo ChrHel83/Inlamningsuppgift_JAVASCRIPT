@@ -11,7 +11,7 @@
             line-height: 0.85;
             font-size: 2.5rem;
             font-weight: var(--font-weight-extrabold);
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
         }
         .headline-2 {
             font-size: 1.5rem;
@@ -36,7 +36,7 @@
             display: grid;
             grid-template-columns: auto 1fr;
             gap: 2rem;
-            width: 32%;
+            width: 100%;
             padding-top: 1rem;
 
             p {
@@ -59,34 +59,53 @@
         }
     }
 
-    .consultation-form {
-        width: 50%;
-        height: 35rem;
-        background-color: white;
-        position: absolute;
-        top: 0rem;
-        right: 0;
-        border: 0px;
-        border-radius: 0.5rem;
-        box-shadow: 0px 0px 3px 0px var(--clr-gray-500);
-    }
+
 }
 .locations {
-    .container {
-        padding-top: 10rem;
+    .container-locations {
+        padding-top: 2rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: flex-end;
+        grid-template-rows: 1fr auto;
+        align-items: flex-start;
         /* min-height: 800px; */
         justify-items: center;
+        gap: 2rem;
+
+        @media (min-width: 768px) {
+            padding-top: 3rem;
+            display: grid;
+            align-items: flex-end;
+            gap: 2rem;
+            /* min-height: 800px; */
+            justify-items: center;
+
+
+        }
+        @media (min-width: 1400px) {
+            padding-top: 12rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: flex-end;
+            /* min-height: 800px; */
+            justify-items: center;
+        }
 
         .map {
             position: relative;
             background-image: url("../../public/map.png");
             background-repeat: no-repeat;
             background-size: cover;
-            width: 636px;
-            height: 540px;
+            width: 360px;
+            height: 306px;
+            
+            @media (min-width: 768px) {
+                width: 600px;
+                height: 510px;
+            }
+            @media (min-width: 1400px) {
+                width: 636px;
+                height: 540px;
+            }
             aspect-ratio: 1;
             .position1 {
                 position: absolute;
@@ -97,18 +116,23 @@
             }
             .position2 {
                 position: absolute;
-                bottom: 78px;
-                left: 143px;
+                bottom: 14.4%;
+                left: 22.5%;
                 transform: translateY(50%);
                 transform: translateX(-50%);
             }
         }
         .content {
             width: 100%;
-            padding-left: 7rem;
+            padding-left: 0rem;
             display: grid;
             grid-template-rows: auto 1fr;
-            gap: 5rem;
+            gap: 2rem;
+        }
+        .content:last-child {
+            align-item: center;
+            padding-inline: auto;
+            justify-content: space-evenly;
         }
     }
 }
