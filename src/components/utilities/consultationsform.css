@@ -12,6 +12,19 @@
         margin-top: 2rem;
         text-align: center;
     }
+.input-group {
+    position: relative;
+}
+    .error-message {
+        /* display: none; */
+        font-weight: 400;
+        position: absolute;
+        bottom: -1rem;
+        color: red;
+        font-size: 0.8rem;
+        margin:0;
+        padding: 0;
+    }
     width: 80%;
     /* height: 30rem; */
     border: 0px;
@@ -40,6 +53,7 @@
         color: var(--clr-gray-800);
         padding: 2rem;
         border-radius: 0.5rem;
+        cursor: pointer;
     }
 
 
