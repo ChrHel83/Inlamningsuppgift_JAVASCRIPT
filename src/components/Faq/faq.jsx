@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import FaqListItem from "../utilities/FaqListItem";
 import "./faq.css";
 import { Link } from "react-router-dom";
+import { useAPI } from "./../../contexts/APIcontext.jsx"; 
 
 const Faq = () => {
     const [faqs, setFaqs] = useState([]);
+    const {API} = useAPI(); // Hämta URL till API:et genom useContext, början på en fetch-wrapper
 
     useEffect(() => {
-        fetch("https://win24-assignment.azurewebsites.net/api/faq")
+        fetch(`${API}faq`)
             .then((res) => {
                 return res.json();
             })

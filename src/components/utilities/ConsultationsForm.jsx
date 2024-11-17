@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./consultationsform.css";
+import { useAPI } from "./../../contexts/APIcontext.jsx"; 
 // import { v4 as uuidv4 } from "uuid";
 
 const ConsultationsForm = () => {
@@ -11,7 +12,7 @@ const ConsultationsForm = () => {
     const [errorsFullname, setErrorsFullname] = useState({});
     const [errorsEmail, setErrorsEmail] = useState({});
     const [submitted, setSubmitted] = useState(false);
-    // const uuid = uuidv4().toString().substring(1, 8);
+    const {API} = useAPI(); // Hämta URL till API:et genom useContext, början på en fetch-wrapper
 
     const validateFullnameField = (name, value) => {
         const error = {};
@@ -67,7 +68,7 @@ const ConsultationsForm = () => {
         e.preventDefault();
 
         if (validateFullname() && validateEmail()) {
-            fetch("https://win24-assignment.azurewebsites.net/api/forms/contact", {
+            fetch(`${API}contacts`, {
                 method: "post",
                 headers: {
                     "Content-type": "application/json",

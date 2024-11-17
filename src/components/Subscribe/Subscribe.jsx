@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "./subscribe.css";
+import { useAPI } from "./../../contexts/APIcontext.jsx"; 
 
 const Subscribe = () => {
     const [formInput, setFormInput] = useState({ email: "" });
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState('false');
+
+    const {API} = useAPI(); // Hämta URL till API:et genom useContext, början på en fetch-wrapper
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,7 +20,7 @@ const Subscribe = () => {
     };
 
     const addSubscriber = () => {
-        fetch("https://win24-assignment.azurewebsites.net/api/forms/subscribe", {
+        fetch(`${API}subscribe`, {
             method: "post",
             headers: {
                 "Content-type": "application/json",
